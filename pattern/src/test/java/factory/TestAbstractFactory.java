@@ -1,10 +1,7 @@
-package Factory;
+package factory;
 
 import factory.abstract_factory.MonsterFactory;
 import org.junit.jupiter.api.Test;
-
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @ClassName TestAbstractFactory

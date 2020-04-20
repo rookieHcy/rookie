@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 import factory.simple_factory.IMonster;
 import factory.simple_factory.MonsterFactory;
