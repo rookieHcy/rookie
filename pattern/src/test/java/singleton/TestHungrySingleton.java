@@ -29,6 +29,10 @@ public class TestHungrySingleton {
         map.forEach((k, v) -> System.out.println(String.format("object: %s, count: %s", k, v)));
     }
 
+    /**
+     * 暴力反射 破坏单例
+     * @throws Exception
+     */
     @Test
     public void testReflect() throws Exception {
         // 获取单例对象
