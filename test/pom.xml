@@ -12,10 +12,17 @@
     <artifactId>test</artifactId>
 
     <dependencies>
+        <!--    java对象内存布局-->
         <dependency>
             <groupId>org.openjdk.jol</groupId>
             <artifactId>jol-core</artifactId>
             <version>0.9</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.47</version>
         </dependency>
     </dependencies>
 </project>

@@ -55,4 +55,29 @@ public class TestIPlusPlus {
         countDownLatch.await();
         System.out.println(count);
     }
+
+    /**
+     * 测试i++
+     * @throws InterruptedException
+     */
+     volatile int count = 0;
+    @Test
+    public void testVolatileIPlusPlus() throws InterruptedException {
+        int threadNum = 10;
+        // lambda内部访问 需要设置为final数组或者AtomicInteger
+
+        // 发令枪
+        CountDownLatch countDownLatch = new CountDownLatch(threadNum);
+        for (int i = 0; i < threadNum; i++) {
+            new Thread(() -> {
+                for (int i1 = 0; i1 < 10000; i1++) {
+                    count++;
+                }
+                countDownLatch.countDown();
+            }).start();
+        }
+        countDownLatch.await();
+        System.out.println(count);
+    }
+
 }
