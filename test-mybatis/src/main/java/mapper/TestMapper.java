@@ -13,4 +13,11 @@ import java.util.List;
  **/
 public interface TestMapper {
     List<TestResult> queryAll();
+
+    TestResult selectById(Integer id);
+
+    TestResult selectByIdFlushCache(Integer id);
+
+    boolean updateCreateTimeById(Integer id);
+
 }

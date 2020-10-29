@@ -13,13 +13,9 @@ import java.util.Date;
  **/
 @Data
 public class TestResult {
-    private String rowKey;
-    private Integer month;
-    private Date createTime;
-    private String seqNum;
-    private String bid;
-    private Integer status;
-    private Integer useTime;
-    private String prodInparam;
+    private Integer id;
+    private String name;
+    private String gender;
+    private String createTime;
 }
 

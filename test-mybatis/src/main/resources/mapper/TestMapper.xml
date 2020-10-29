@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="mapper.TestMapper" >
+<mapper namespace="mapper.TestMapper">
 
-    <select id="queryAll"  resultType="pojo.TestResult">
-        select * from test2
+    <select id="queryAll" resultType="pojo.TestResult">
+        select * from user
     </select>
 
+    <!--    #是占位符 $可能引起sql注入 -->
+    <select id="selectById" resultType="pojo.TestResult">
+        select * from user where id = #{id}
+    </select>
+
+    <update id="updateCreateTimeById">
+        update user set create_time = now() where id = #{id}
+    </update>
+
+    <select id="selectByIdFlushCache" flushCache="true" resultType="pojo.TestResult">
+        select * from user where id = #{id}
+    </select>
 </mapper>
